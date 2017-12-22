@@ -733,8 +733,7 @@ def append_url_params(url,pjsua_flag,boshdomain):
         url = "%s#config.iAmRecorder=true&config.externalConnectUrl=null"%(url)
         if boshdomain:
             logging.info('overriding config.hosts.domain with boshdomain: %s'%boshdomain)
-            url = "%s&config.hosts.domain=\"%s\""%(url,boshdomain)
-
+	    url = "%s&config.hosts.domain=%s"%(url,boshdomain)
     return url
 
 def start_jibri_selenium(url,token='token',binary_location=None,google_account=None,google_account_password=None, xmpp_login=None, xmpp_password=None, boshdomain=None, displayname=None, email=None, pjsua_flag=False, skip_check_audio_stream=False, sipaddress=None):
