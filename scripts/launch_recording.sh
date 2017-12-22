@@ -25,4 +25,4 @@ if [ ! -z "$4" ]; then
     fi
 fi
 
-./start-ffmpeg.sh $STREAM
+./start-ffmpeg.sh $STREAM $URL

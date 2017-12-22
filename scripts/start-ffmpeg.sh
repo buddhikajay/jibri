@@ -2,7 +2,9 @@
 
 PID_DIR=/var/run/jibri/
 
-STREAM=$1
+#url is passed as the second parameter from launch_recording.sh
+#url pattern : https://video2.campcite.com/myRoomName#config.iAmRecorder=true&config.externalConnectUrl=null&config.hosts.domain=recorder.video2.campcite.com
+STREAM=/tmp/$(echo $2 | sed 's/#.*//' | sed 's#.*/##').flv
 
 if [[ $STREAM == rtmp://* ]]; then
   FORMAT='flv'
