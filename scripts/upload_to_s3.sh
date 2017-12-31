@@ -1,2 +1,2 @@
-aws s3 cp /home/jibri/recordings/* s3://campcite
+aws s3 cp /home/jibri/recordings/* s3://meetfilemanager/userfiles/
 rm /home/jibri/recordings/*
